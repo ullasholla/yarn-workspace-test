@@ -1,0 +1,13 @@
+{
+  "name": "@foobar/lib",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "dependencies": {},
+  "scripts": {
+    "build": "npm-run-all clean compile",
+    "compile": "tsc -p ./",
+    "clean": "rimraf ./dist",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {}
+}

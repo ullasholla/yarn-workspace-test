@@ -1,0 +1,41 @@
+{
+	"name": "ext",
+	"displayName": "ext",
+	"description": "",
+	"publisher": "foobar",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.helloWorld"
+  ],
+  "repository": "https://github.com/ullasholla/yarn-workspace-test",
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"package": "vsce package --yarn",
+    "build": "npm-run-all clean compile",
+    "clean": "rimraf ./dist *.vsix",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"@foobar/lib": "0.1.0"
+	}
+}

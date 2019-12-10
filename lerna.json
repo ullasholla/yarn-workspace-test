@@ -1,0 +1,12 @@
+{
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "allowBranch": ["master", "local/master"],
+      "message": "chore(release): publish"
+    }
+  },
+  "ignoreChanges": ["**/.gitignore"]
+}
